@@ -46,14 +46,28 @@ git clone https://github.com/crystalhanuu/ai-output-pre-delivery-review.git
 
 ### 步骤 2:放到 Claude Code 的 Skills 目录
 
-打开终端(Terminal),粘贴以下命令并回车:
+打开终端(Terminal),根据你的下载方式选一种:
+
+#### 方式 A:从上面"Download ZIP"下载
+
+下载下来的文件夹名会自动带 `-main` 后缀(GitHub 默认行为)。粘贴这两条命令并回车:
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -r ~/Downloads/ai-output-pre-delivery-review ~/.claude/skills/
+mv ~/Downloads/ai-output-pre-delivery-review-main ~/.claude/skills/ai-output-pre-delivery-review
 ```
 
-最终目录结构应该是:
+#### 方式 B:用 git clone 下载
+
+```bash
+mkdir -p ~/.claude/skills
+cd ~/.claude/skills
+git clone https://github.com/crystalhanuu/ai-output-pre-delivery-review.git
+```
+
+**关键**:无论哪种方式,最终文件夹名必须是 `ai-output-pre-delivery-review`(不带 `-main`),否则 Claude Code 识别不到。
+
+最终目录结构:
 
 ```
 ~/.claude/skills/ai-output-pre-delivery-review/
